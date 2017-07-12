@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    each card in cards
+      div.card-small #{card.question}
+
+    label Add a card
+    form(action="/cards", method="post")
+      label question
+        input(type='text', name="question" )
+      label answer
+        input(type='text', name="answer")
+      button(type="submit") Add card
+
+
+    a(href=`cards/${Math.floor(Math.random()*(cards.length-1))}`) start studying 

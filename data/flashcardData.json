@@ -3,9 +3,9 @@
         "title": "JavaScript Flashcards",
         "cards": [
             {
-                "question": "What language are Express apps written in?",
-                "hint": "It starts with a \"J\"",
-                "answer": "JavaScript"
+                "question": "What are middleware functions?",
+                "hint": "Middleware sits between request and response",
+                "answer": "Workers that craft responses"
             },
             {
                 "question": "What is one way a website can store data in a user's browser?",

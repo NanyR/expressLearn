@@ -2,6 +2,8 @@ extends layout
 
 block content
   section#card
-    p #{text.question}
-    button hint
+    p#text #{text.question}
+    if text.hint
+      button hint
     button flip
+    button change card
