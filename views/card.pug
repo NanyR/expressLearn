@@ -2,8 +2,6 @@ extends layout
 
 block content
   section#card
-    p#text #{text.question}
-    if text.hint
-      button hint
-    button flip
-    button change card
+    p#text #{text}
+    a(href=`/cards/${id}?side=answer`) flip
+    a(href=`/cards/${random}?side=question`) change card

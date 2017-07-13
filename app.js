@@ -12,15 +12,14 @@ app.get('/', (req, res)=>{
 
 app.get('/cards', (req, res)=>{
   res.render('cards', {cards})
-  // const cardNum=Math.floor(Math.random()*(cards.length-1))
-  // const text= cards[cardNum]
-  // const templateData= {text}
-  // res.render('card', templateData)
 })
 
 app.get('/cards/:id', (req, res)=>{
-  const text= cards[req.params.id]
-  const templateData= {text}
+  const {side}= req.query
+  const {id}=req.params
+  const text= cards[id][side]
+  const templateData= {id, text}
+  templateData.random=Math.floor(Math.random()*(cards.length-1))
   res.render('card', templateData)
 })
 
